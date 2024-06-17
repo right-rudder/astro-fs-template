@@ -5,8 +5,10 @@ import homePage from "../data/homePage"
 const { data } = homePage;
 ---
 
-<BaseLayout>
+<BaseLayout 
+  siteTitle={data.pageTitle} 
+  siteDescription={data.pageDescription} 
+  keywords={data.pageKeywords}
+>
   
 </BaseLayout>
-
-{data.test}  
