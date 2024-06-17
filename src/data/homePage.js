@@ -6,9 +6,10 @@ const homePage = {
     pageKeywords: "add keywords here.  take a look at the consts.ts file for more guidance on keywords",
 
     //top header
-    headerImagePath: "",
-    headerH1: "",
-    headerH2: "",
+    headerImagePath: "../assets/flight-school-name-location-keyword.jpg",
+    headerImageAlt: "Plane flying overhead XYZ location at ABC Flight School",
+    headerH1: "123 Flight School",
+    headerH2: "Rudderville Anytown's best flight school",
 
     //contentOne
     contentOneImage: "",
