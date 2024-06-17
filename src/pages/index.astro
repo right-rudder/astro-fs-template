@@ -1,8 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import homePage from "../data/homePage"
+
+const { data } = homePage;
 ---
 
-<BaseLayout siteTitle="Alto Flight Academy | Pilot Training in Oklahoma City, OK">
-
-
+<BaseLayout>
+  
 </BaseLayout>
+
+{data.test}  

@@ -21,13 +21,11 @@ import ChatWidget from "../components/ChatWidget.astro";
   </head>
   <body>
     <Navbar pathname={pathname} client:load />
-    <slot name="header" />
     <main>
       <slot />
     </main>
     <Footer />
     <ChatWidget />
-    <!-- <script src="../scripts/animate-on-scroll.js"></script> -->
   </body>
 </html>
  
