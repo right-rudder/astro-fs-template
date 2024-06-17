@@ -3,7 +3,6 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
-import alpinejs from "@astrojs/alpinejs";
 
 import partytown from "@astrojs/partytown";
 
@@ -15,13 +14,9 @@ export default defineConfig({
     sitemap(),
     tailwind(),
     react(),
-    alpinejs({ entrypoint: '/src/entrypoint' }),
     partytown(),
   ],
   redirects: {
-    "/pilot-training": "/ground-school/private-pilot",
-    "/airplanes-for-sale": "/acquisitions-sales",
-    "/airplanes-for-rent": "/about/our-fleet",
-    "/how-to-operate-an-airplane": "/ground-school/instrument-rating",
+    // View previous sitemap and Google Search Console and place redirects from old routes to new routes here
   },
 });
