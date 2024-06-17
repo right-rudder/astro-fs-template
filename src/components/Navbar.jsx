@@ -91,34 +91,31 @@ const Navbar = ({ pathname }) => {
             id="navbar"
           >
             <div className="flex w-full items-center justify-between">
-              <div className="absolute bg-gradient-to-br from-red-500 to-red-700 top-0 -left-[77rem] lg:-left-[73rem] h-20 lg:h-28 w-[90rem]"></div>
+              <div className="absolute bg-gradient-to-br from-blue-500 to-blue-700 top-0 -left-[77rem] lg:-left-[73rem] h-20 lg:h-28 w-[90rem]"></div>
               <a
                 href="/"
                 className="uppercase leading-none flex flex-col text-white z-50 font-bold text-4xl tracking-wider ml-3 lg:ml-8"
               >
-                <p className="font-sans2">Alto</p>
-                <p className="text-sm lg:text-xl font-stock tracking-loose font-semibold text-gray-800">
-                  Flight Academy
-                </p>
+                <p className="font-sans2">LOGO</p>
               </a>
               <div className="hidden lg:block">
                 <ul className="flex gap-5 xl:gap-10 items-center">
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
-                      className={`${isActive(item, pathname) ? "underline decoration-red-600 decoration-4 underline-offset-[10px]" : ""} relative group last:no-underline`}
+                      className={`${isActive(item, pathname) ? "underline decoration-blue-600 decoration-4 underline-offset-[10px]" : ""} relative group last:no-underline`}
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
                     >
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-white font-bold text-lg duration-300 hover:underline decoration-red-600  decoration-4 underline-offset-[10px] py-12 border-main-red whitespace-nowrap group-last:hover:text-dark-blue group-last:bg-red-700 group-last:py-4 group-last:px-8 group-last:rounded-full group-last:hover:bg-white group-last:hover:no-underline"
+                          className="text-white font-bold text-lg duration-300 hover:underline decoration-blue-600  decoration-4 underline-offset-[10px] py-12 border-main-red whitespace-nowrap group-last:hover:text-dark-blue group-last:bg-blue-700 group-last:py-4 group-last:px-8 group-last:rounded-full group-last:hover:bg-white group-last:hover:no-underline"
                         >
                           {item.name}
                         </a>
                       ) : (
-                        <span className="font-bold cursor-default text-white text-lg duration-300 hover:underline decoration-red-600  decoration-4 underline-offset-[10px] py-12 border-main-red whitespace-nowrap">
+                        <span className="font-bold cursor-default text-white text-lg duration-300 hover:underline decoration-blue-600  decoration-4 underline-offset-[10px] py-12 border-main-red whitespace-nowrap">
                           {item.name}
                         </span>
                       )}
@@ -129,7 +126,7 @@ const Navbar = ({ pathname }) => {
                           {item.submenu.map((subitem, subIndex) => (
                             <li
                               key={subIndex}
-                              className={`${isActive(subitem, pathname) ? "bg-red-700" : ""} relative hover:bg-red-600`}
+                              className={`${isActive(subitem, pathname) ? "bg-blue-700" : ""} relative hover:bg-blue-600`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
@@ -152,7 +149,7 @@ const Navbar = ({ pathname }) => {
                                       (subsubitem, subsubIndex) => (
                                         <li
                                           key={subsubIndex}
-                                          className={`${isActive(subsubitem, pathname) ? "bg-red-700" : ""} relative hover:bg-red-600`}
+                                          className={`${isActive(subsubitem, pathname) ? "bg-blue-700" : ""} relative hover:bg-blue-600`}
                                         >
                                           <a
                                             href={subsubitem.link}
@@ -257,7 +254,7 @@ const Navbar = ({ pathname }) => {
         </a>
 
         <div
-          className={`absolute w-60 h-20 bg-red-700 top-16 z-30 duration-300  ${
+          className={`absolute w-60 h-20 bg-blue-700 top-16 z-30 duration-300  ${
             openMobile ? "translate-x-0 delay-300" : "-translate-x-full "
           }`}
         ></div>
@@ -272,7 +269,7 @@ const Navbar = ({ pathname }) => {
               {item.link ? (
                 <a
                   href={item.link}
-                  className="font-bold p-5 block text-white text-lg duration-300 border-main-red whitespace-nowrap group-last:bg-red-700 group-last:py-4 group-last:px-8 group-last:rounded-full group-last:mt-4 group-last:text-center group-last:mx-5"
+                  className="font-bold p-5 block text-white text-lg duration-300 border-main-red whitespace-nowrap group-last:bg-blue-700 group-last:py-4 group-last:px-8 group-last:rounded-full group-last:mt-4 group-last:text-center group-last:mx-5"
                 >
                   {item.name}
                 </a>
@@ -280,11 +277,11 @@ const Navbar = ({ pathname }) => {
                 <div className="font-bold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-red whitespace-nowrap">
                   <p>{item.name}</p>
                   <div
-                    className={`p-1 pointer-events-none duration-300 rounded-full ${hoveredIndex === index ? "bg-white rotate-90" : "bg-red-700 -rotate-90"} 
+                    className={`p-1 pointer-events-none duration-300 rounded-full ${hoveredIndex === index ? "bg-white rotate-90" : "bg-blue-700 -rotate-90"} 
                     `}
                   >
                     <IoIosArrowForward
-                      className={`${hoveredIndex === index ? "text-red-700" : "text-white"} size-5`}
+                      className={`${hoveredIndex === index ? "text-blue-700" : "text-white"} size-5`}
                     />
                   </div>
                 </div>
@@ -307,11 +304,11 @@ const Navbar = ({ pathname }) => {
                         <div className="font-bold p-5 w-full justify-between flex cursor-pointer text-white text-lg duration-300  border-main-red whitespace-nowrap">
                           <p>{subitem.name}</p>
                           <div
-                            className={`p-1 pointer-events-none duration-300 rounded-full ${subHoveredIndex === subIndex ? "bg-white rotate-90" : "bg-red-700 -rotate-90"} 
+                            className={`p-1 pointer-events-none duration-300 rounded-full ${subHoveredIndex === subIndex ? "bg-white rotate-90" : "bg-blue-700 -rotate-90"} 
                     `}
                           >
                             <IoIosArrowForward
-                              className={`${subHoveredIndex === subIndex ? "text-red-700" : "text-white"} size-5`}
+                              className={`${subHoveredIndex === subIndex ? "text-blue-700" : "text-white"} size-5`}
                             />
                           </div>
                         </div>
@@ -347,7 +344,7 @@ const Navbar = ({ pathname }) => {
               href={`mailto:${EMAIL_ADDRESS}`}
               className="border p-2 w-fit border-white rounded-full bg-white cursor-pointer"
             >
-              <MdEmail className="size-3 text-red-700" />
+              <MdEmail className="size-3 text-blue-700" />
             </a>
             <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
           </div>
@@ -356,7 +353,7 @@ const Navbar = ({ pathname }) => {
               href={`tel:${PHONE_NUMBER}`}
               className="border p-2 w-fit border-white rounded-full bg-white"
             >
-              <FaPhone className="size-3 text-red-700" />
+              <FaPhone className="size-3 text-blue-700" />
             </a>
             <a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
           </div>
@@ -365,7 +362,7 @@ const Navbar = ({ pathname }) => {
             <a href={FACEBOOK_URL} target="_blank">
               <span className="sr-only">Facebook</span>
               <svg
-                className="size-6 text-red-700"
+                className="size-6 text-blue-700"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -380,7 +377,7 @@ const Navbar = ({ pathname }) => {
             <a href={INSTAGRAM_URL} target="_blank">
               <span className="sr-only">Instagram</span>
               <svg
-                className="size-6 text-red-700"
+                className="size-6 text-blue-700"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -395,7 +392,7 @@ const Navbar = ({ pathname }) => {
             <a href={TIKTOK_URL} target="_blank">
               <span className="sr-only">YouTube</span>
               <svg
-                className="size-6 text-red-700"
+                className="size-6 text-blue-700"
                 fill="currentColor"
                 viewBox="0 0 512 512"
                 id="icons"

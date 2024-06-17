@@ -12,6 +12,7 @@ import {
   INSTAGRAM_URL,
   TIKTOK_URL,
   AIRPORT,
+  SITE_DESCRIPTION,
 } from "../consts";
 import { navbarLinks } from "../data/navbarLinks";
 const { pathname } = Astro.url;
@@ -22,25 +23,16 @@ const { pathname } = Astro.url;
     <div class="flex gap-10 flex-col lg:flex-row">
       <div class="flex flex-col gap-5 lg:w-1/3">
         <a href="/" class="text-4xl font-bold uppercase"
-          ><h2><span class="text-red-700">Alto</span> Flight Academy</h2></a
+          ><h2><span class="text-blue-700">XYZ</span> Flight School</h2></a
         >
         <p class="text-gray-400 font-medium max-w-xl">
-          Alto Flight Academy has been proudly training pilots in Oklahoma City
-          since 1995. We are at Sundance Airport KHSD in Yukon, OK just above
-          Bethany. With FAA certified flight instructors, competitive rates, and
-          the best aircraft around, we have everything to offer the aspiring
-          pilot. Whether you are interested in earning your private pilot
-          certificate for recreational purposes or becoming a professional
-          airline pilot, we are here to meet your flight training needs in
-          Oklahoma. Our comprehensive programs include private pilot training,
-          instrument rating courses, and commercial pilot training to ensure you
-          achieve your aviation goals.
+          {SITE_DESCRIPTION}
         </p>
         <div class="flex space-x-6">
           <a
             href={FACEBOOK_URL}
             target="_blank"
-            class="text-gray-400 hover:text-red-700 duration-200"
+            class="text-gray-400 hover:text-blue-700 duration-200"
           >
             <span class="sr-only">Facebook</span>
             <svg
@@ -58,7 +50,7 @@ const { pathname } = Astro.url;
           <a
             href={INSTAGRAM_URL}
             target="_blank"
-            class="text-gray-400 hover:text-red-700 duration-200"
+            class="text-gray-400 hover:text-blue-700 duration-200"
           >
             <span class="sr-only">Instagram</span>
             <svg
@@ -76,7 +68,7 @@ const { pathname } = Astro.url;
           <a
             href={TIKTOK_URL}
             target="_blank"
-            class="text-gray-400 hover:text-red-700 duration-200"
+            class="text-gray-400 hover:text-blue-700 duration-200"
           >
             <span class="sr-only">YouTube</span>
             <svg
@@ -95,36 +87,36 @@ const { pathname } = Astro.url;
       </div>
 
       <div class="flex flex-col gap-3">
-        <h3 class="font-semibold pb-5">New to Flying?</h3>
+        <h3 class="font-semibold pb-5">Quick Links</h3>
         <ul class="flex flex-col gap-2 text-gray-400">
           <li>
             <a
               href="/why-become-a-pilot"
-              class="hover:text-red-700 duration-200 font-medium"
+              class="hover:text-blue-700 duration-200 font-medium"
             >
-              Why Become a Pilot
+              New To Flying?
             </a>
           </li>
           <li>
             <a
               href="/intro-flight"
-              class="hover:text-red-700 duration-200 font-medium"
+              class="hover:text-blue-700 duration-200 font-medium"
             >
-              Your First Flight Lesson
+              Another Link Somewhere
             </a>
           </li>
           <li>
             <a
               href="/ground-school/private-pilot"
-              class="hover:text-red-700 duration-200 font-medium"
+              class="hover:text-blue-700 duration-200 font-medium"
             >
-              Private Pilot Ground School
+              More link to somewhere
             </a>
           </li>
           <li>
             <a
               href="/about/learning-center"
-              class="hover:text-red-700 duration-200 font-medium"
+              class="hover:text-blue-700 duration-200 font-medium"
             >
               Learning Center
             </a>
@@ -132,12 +124,12 @@ const { pathname } = Astro.url;
         </ul>
       </div>
       <div class="flex flex-col gap-3">
-        <h3 class="font-semibold pb-5">Quick Links</h3>
+        <h3 class="font-semibold pb-5">More Links</h3>
         <ul class="flex flex-col gap-2 text-gray-400">
           <li>
             <a
               href="/about/our-story"
-              class="hover:text-red-700 duration-200 font-medium"
+              class="hover:text-blue-700 duration-200 font-medium"
             >
               About Us
             </a>
@@ -145,7 +137,7 @@ const { pathname } = Astro.url;
           <li>
             <a
               href="/about/our-team"
-              class="hover:text-red-700 duration-200 font-medium"
+              class="hover:text-blue-700 duration-200 font-medium"
             >
               Our Team
             </a>
@@ -153,23 +145,15 @@ const { pathname } = Astro.url;
           <li>
             <a
               href="/about/our-fleet"
-              class="hover:text-red-700 duration-200 font-medium"
+              class="hover:text-blue-700 duration-200 font-medium"
             >
               Our Fleet
             </a>
           </li>
           <li>
             <a
-              href="/acquisitions-sales"
-              class="hover:text-red-700 duration-200 font-medium"
-            >
-              Aircraft Sales and Acquisition
-            </a>
-          </li>
-          <li>
-            <a
               href="/contact"
-              class="hover:text-red-700 duration-200 font-medium"
+              class="hover:text-blue-700 duration-200 font-medium"
             >
               Contact Us
             </a>
@@ -180,25 +164,25 @@ const { pathname } = Astro.url;
         <h3 class="font-semibold pb-5">Contact</h3>
         <ul class="flex flex-col gap-1 text-gray-400 font-medium">
           <li class="flex gap-2 group items-center">
-            <MdEmail className="size-4 group-hover:text-red-700 duration-200" />
+            <MdEmail className="size-4 group-hover:text-blue-700 duration-200" />
             <a
-              class="group-hover:text-red-700 duration-200"
+              class="group-hover:text-blue-700 duration-200"
               href=`mailto:${EMAIL_ADDRESS}`>{EMAIL_ADDRESS}</a
             >
           </li>
           <li class="flex gap-2 group items-center">
-            <FaPhone className="size-4 group-hover:text-red-700 duration-200" />
+            <FaPhone className="size-4 group-hover:text-blue-700 duration-200" />
             <a
-              class="group-hover:text-red-700 duration-200"
+              class="group-hover:text-blue-700 duration-200"
               href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a
             >
           </li>
           <li class="flex gap-2 group">
             <IoLocationSharp
-              className="size-4 group-hover:text-red-700 duration-200 mt-1"
+              className="size-4 group-hover:text-blue-700 duration-200 mt-1"
             />
             <a
-              class="group-hover:text-red-700 duration-200"
+              class="group-hover:text-blue-700 duration-200"
               href="https://maps.app.goo.gl/jV2NSfU3mHNMf2Rc7"
               target="_blank"
             >
@@ -214,7 +198,7 @@ const { pathname } = Astro.url;
       class="flex flex-col sm:flex-row justify-between border-t border-gray-600 py-5 mt-10 gap-2"
     >
       <p>
-        <span class="font-semibold">Alto Flight Academy</span> &copy; {
+        <span class="font-semibold">XYZ FLIGHT SCHOOL</span> &copy; {
           today.getFullYear()
         }. All rights reserved. <a
           class="hover:underline"
@@ -225,7 +209,7 @@ const { pathname } = Astro.url;
         Powered by <a
           href="https://rightruddermarketing.com/"
           target="_blank"
-          class="font-semibold hover:text-red-700 duration-200"
+          class="font-semibold hover:text-blue-700 duration-200"
           >More Right Rudder</a
         >
       </p>
