@@ -16,25 +16,104 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 >
  
 <!-- HEADER -->
-<div class="h-[90vh] bg-gray-800 text-white flex flex-col items-center justify-center">
-  <!-- <Image 
+<div class="h-[90vh] flex flex-col items-center justify-center relative">
+  <Image 
     src={images[data.headerImagePath]()}
     alt={data.headerImageAlt}
-    class=""
-  /> -->
-  
-  <h1 class="text-3xl font-bold">{data.headerH1}</h1>
-  <h2 class="text-xl font-bold">{data.headerH2}</h2>
+    class="object-cover w-full h-full opacity-50"
+  />
+  <div class="absolute flex flex-col items-center text-center">
+    <h1 class="text-3xl font-bold">{data.headerH1}</h1>
+    <h2 class="text-xl font-bold">{data.headerH2}</h2>
+  </div>
 </div>
 
 
-<!-- Content 1 -->
- <div class="">
-<!-- <Image 
-    src={data.contentOneImage}
-    alt={data.contentOneAlt}
-    class=""
-  />  -->
-</div>
+<!-- CONTENT 1 -->
+ <section class="flex flex-col lg:flex-row bg-white">
+  <div class="lg:w-1/2 flex flex-col items-center">
+    <Image 
+      src={images[data.contentOneImage]()}
+      alt={data.contentOneImageAlt}
+      class="object-cover w-full"
+    />
+    <p class="italic text-gray-500">{data.contentOneImageCaption}</p>
+  </div>
+   <div class="lg:w-1/2 flex flex-col items-center">
+    <h3 class="font-bold text-lg">{data.contentOneH3}</h3>
+    {
+      data.contentOneParagraphs.map((paragraph) => (
+        <p class="pb-5" set:html={paragraph} />
+      ))
+    }
+    <a href={data.contentOneButtonLink}>
+      <div class="">{data.contentOneButtonText}</div>
+    </a>
+   </div>
+ </section>
+
+ <!-- CONTENT 2 -->
+ <section class="flex flex-col lg:flex-row-reverse bg-white">
+  <div class="lg:w-1/2 flex flex-col items-center">
+    <Image 
+      src={images[data.contentTwoImage]()}
+      alt={data.contentTwoImageAlt}
+      class="object-cover w-full"
+    />
+    <p class="italic text-gray-500">{data.contentTwoImageCaption}</p>
+  </div>
+   <div class="lg:w-1/2 flex flex-col items-center">
+    <h3 class="font-bold text-lg">{data.contentTwoH3}</h3>
+    {
+      data.contentTwoParagraphs.map((paragraph) => (
+        <p class="pb-5" set:html={paragraph} />
+      ))
+    }
+    <a href={data.contentTwoButtonLink}>
+      <div class="">{data.contentTwoButtonText}</div>
+    </a>
+   </div>
+ </section>
+
+ <!-- CONTENT 3 -->
+ <section class="flex flex-col lg:flex-row bg-white">
+  <div class="lg:w-1/2 flex flex-col items-center">
+    <Image 
+      src={images[data.contentThreeImage]()}
+      alt={data.contentThreeImageAlt}
+      class="object-cover w-full"
+    />
+    <p class="italic text-gray-500">{data.contentThreeImageCaption}</p>
+  </div>
+   <div class="lg:w-1/2 flex flex-col items-center">
+    <h3 class="font-bold text-lg">{data.contentThreeH3}</h3>
+    {
+      data.contentThreeParagraphs.map((paragraph) => (
+        <p class="pb-5" set:html={paragraph} />
+      ))
+    }
+    <a href={data.contentThreeButtonLink}>
+      <div class="">{data.contentThreeButtonText}</div>
+    </a>
+   </div>
+ </section>
+
+ <!-- CTA 1 -->
+ <section>
+    <h2>{data.CTAOneH2}</h2>
+    <h3>{data.CTAOneH3}</h3>
+    <a href={data.CTAOneButtonLink}>
+      <div class="">{data.CTAOneButtonText}</div>
+    </a>
+ </section>
+
+ <!-- CTA 2 -->
+ <section>
+  <h2>{data.CTATwoH2}</h2>
+  <h3>{data.CTATwoH3}</h3>
+  <a href={data.CTATwoButtonLink}>
+    <div class="">{data.CTATwoButtonText}</div>
+  </a>
+</section>
 
 </BaseLayout>
